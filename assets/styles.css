@@ -1,0 +1,267 @@
+/* ---------- Variables ---------- */
+:root {
+  --clr-primary: #0052d4;
+  --clr-primary-light: #4facfe;
+  --clr-dark: #0c1016;
+  --clr-light: #f7f9fc;
+  --clr-muted: #6b7280;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --radius: 0.75rem;
+  --transition: 0.25s ease;
+}
+
+/* ---------- Reset básico ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  color: var(--clr-dark);
+  background: var(--clr-light);
+}
+
+/* ---------- Estructura ---------- */
+.wrapper {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section.alt {
+  background: #fff;
+}
+
+/* ---------- Header / Nav ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  background: #ffffffd9;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+}
+
+.header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.75rem;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--clr-dark);
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--clr-primary);
+}
+
+/* ---------- Avatar / Foto de perfil ---------- */
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 180px;       /* ajusta el tamaño a tu gusto */
+  height: 180px;
+  border-radius: 50%; /* círculo perfecto */
+  object-fit: cover;  /* recorta sin deformar */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  color: #fff;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 82, 212, 0.8),
+      rgba(79, 172, 254, 0.8)
+    ),
+    url("img/hero-bg.jpg") center / cover fixed;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: var(--fw-bold);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.5rem;
+  background: #fff;
+  color: var(--clr-primary);
+  border-radius: var(--radius);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--clr-primary-light);
+  color: #fff;
+}
+
+/* ---------- Grids ---------- */
+.grid-2 {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Cards & Meta ---------- */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.meta li + li {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  display: grid;
+  gap: 2rem;
+  border-left: 3px solid var(--clr-primary);
+  padding-left: 1.5rem;
+}
+
+.timeline article {
+  position: relative;
+}
+
+.timeline article::before {
+  content: "";
+  position: absolute;
+  left: -1.65rem;
+  top: 0.4rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--clr-primary);
+}
+
+.year {
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary);
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-grid span {
+  background: var(--clr-primary-light);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery figure {
+  display: flex;               /* centra ícono + caption */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;           /* altura mínima para que el ícono se vea bien */
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  padding: 1rem;
+}
+
+.gallery figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* --- Iconografía en galería --- */
+.icon {
+  font-size: 3.5rem;           /* tamaño del ícono */
+  color: var(--clr-primary);
+  transition: transform var(--transition);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- Educación ---------- */
+.edu li + li {
+  margin-top: 1rem;
+}
+
+/* ---------- Contacto ---------- */
+.contact-card {
+  text-align: center;
+}
+
+.contact-card p {
+  margin-top: 0.5rem;
+  color: var(--clr-muted);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--clr-dark);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+}

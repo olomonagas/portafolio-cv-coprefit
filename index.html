@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodrigo Jara | Portafolio & CV</title>
+
+    <!-- Tipografía moderna (Inter) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome (íconos) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+
+  <body>
+    <!-- Barra de navegación fija -->
+    <header class="header">
+      <div class="wrapper">
+        <h1 class="logo">Rodrigo Jara</h1>
+
+        <nav class="nav">
+          <a href="#about">Sobre mí</a>
+          <a href="#experience">Experiencia</a>
+          <a href="#skills">Habilidades</a>
+          <a href="#portfolio">Portafolio</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="wrapper">
+        <h2>Sales Development Rep &<br />Full-Stack JS Developer</h2>
+        <p>
+          8 años creando oportunidades B2B y automatizando análisis de riesgo
+          con Python. Hoy combino <strong>ventas consultivas</strong> y
+          <strong>desarrollo&nbsp;software</strong> para impulsar SaaS de alto
+          impacto.
+        </p>
+        <a href="#contact" class="btn">¡Conversemos!</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="section">
+      <div class="wrapper grid-2">
+        <!-- Columna 1 → foto + presentación -->
+        <div>
+          <div class="avatar-wrapper">
+            <img
+              class="avatar"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQE1mPixc-DdPA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684865523493?e=1755734400&v=beta&t=xhPO6JechVYPDd3SAGXwXwU57pasmcXdoRJ5UETxHC0"
+              alt="Foto de Rodrigo Jara Cortés"
+            />
+          </div>
+
+          <h3>Perfil Profesional</h3>
+          <p>
+            Especialista en ventas corporativas para
+            <em>fintech &amp; risk-tech</em>, colaborando con Experian, Equifax y
+            Fincred. Apasionado por la prospección, la gestión de cuentas
+            estratégicas y la generación de valor a partir de datos. Actualmente
+            amplío mi impacto desarrollando soluciones full-stack con
+            JavaScript.
+          </p>
+        </div>
+
+        <!-- Columna 2 → datos de contacto -->
+        <div class="card">
+          <ul class="meta">
+            <li><strong>Email:</strong> rodrigojara1991@gmail.com</li>
+            <li><strong>Teléfono:</strong> +56 9 4598 0579</li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/rodrigo-jara-7a9697245/"
+                >/in/rodrigo-jara</a
+              >
+            </li>
+            <li><strong>Ubicación:</strong> El Quisco, Chile</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience" class="section alt">
+      <div class="wrapper">
+        <h3>Experiencia Laboral</h3>
+
+        <div class="timeline">
+          <article>
+            <span class="year">2023 – Hoy</span>
+            <h4>Experian Chile — SDR</h4>
+            <p>
+              Generación y calificación de leads corporativos, pipeline en
+              Salesforce, automatización de workflows con Make.
+            </p>
+          </article>
+
+          <article>
+            <span class="year">2021 – 2023</span>
+            <h4>Fincred SPA — Ejecutivo Cuentas Clave</h4>
+            <p>
+              Gestión de cartera B2B (+50 cuentas), desarrollo de scripts Python
+              para scoring que redujo 90 % el ciclo de evaluación.
+            </p>
+          </article>
+
+          <article>
+            <span class="year">2016 – 2021</span>
+            <h4>Orsan SA (con Equifax) — Ejecutivo Comercial</h4>
+            <p>
+              Venta consultiva de productos de riesgo para pymes e industria;
+              expansión de cartera y coordinación de proyectos de evaluación.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="section">
+      <div class="wrapper">
+        <h3>Habilidades &amp; Tecnologías</h3>
+
+        <div class="skills-grid">
+          <span>Prospección &amp; Lead Gen</span>
+          <span>Python &amp; Data Analysis</span>
+          <span>Forecasting</span>
+          <span>HubSpot / Salesforce</span>
+          <span>Automatización Make</span>
+          <span>JavaScript (React / Node)</span>
+          <span>Inglés Intermedio</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portfolio" class="section alt">
+      <div class="wrapper">
+        <h3>Portafolio Destacado</h3>
+
+        <div class="gallery">
+          <figure>
+            <i class="fa-solid fa-chart-column icon"></i>
+            <figcaption>Dashboard KNCHA</figcaption>
+          </figure>
+
+          <figure>
+            <i class="fa-solid fa-file-pdf icon"></i>
+            <figcaption>Automatización Carpeta Tributaria</figcaption>
+          </figure>
+
+          <figure>
+            <i class="fa-solid fa-globe icon"></i>
+            <figcaption>Landing Page SaaS</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="education" class="section">
+      <div class="wrapper grid-2">
+        <div>
+          <h3>Educación</h3>
+          <ul class="edu">
+            <li>
+              <strong>Bootcamp Full-Stack JS</strong><br />Desafío Latam — 2025
+              (en curso)
+            </li>
+            <li>
+              <strong>Ing. Administración Finanzas</strong><br />INACAP —
+              2018-2022 (congelada)
+            </li>
+            <li>
+              <strong>Enseñanza Media</strong><br />Colegio Teresa de los Andes —
+              2010
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Referencias</h3>
+          <ul class="edu">
+            <li>Ignacio Porras — Experian Chile</li>
+            <li>Alberto Gálvez — Fincred SPA</li>
+            <li>Juan P. Espina — Orsan SA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section alt">
+      <div class="wrapper contact-card">
+        <h3>¿Te interesa trabajar conmigo?</h3>
+        <a class="btn" href="mailto:rodrigojara1991@gmail.com">Enviar correo</a>
+        <p>o llámame al +56 9 4598 0579</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Rodrigo Jara Cortés — Hecho con ♥ y Café</p>
+    </footer>
+  </body>
+</html>
